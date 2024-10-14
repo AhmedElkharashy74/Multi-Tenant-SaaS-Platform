@@ -1,5 +1,5 @@
 {
-  "name": "Multi-Tenant SaaS Platform",
+  "name": "MultiTenantSaaSPlatform",
   "version": "1.1.0",
   "main": "app.js",
   "scripts": {

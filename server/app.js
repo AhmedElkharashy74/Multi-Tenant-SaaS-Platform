@@ -8,6 +8,11 @@ require('dotenv').config();
 const port = process.env.PORT || 3000;
 const connectDB = require('./config/db')
 
+
+//routers
+const authRoutes = require('./routers/authRoutes')
+
+
 // Middleware setup
 app.use(cors());              // Enable Cross-Origin Resource Sharing
 app.use(helmet());            // Secure HTTP headers
@@ -17,6 +22,7 @@ app.use(express.json());      // Parse JSON bodies (Express built-in)
 connectDB();
 // Routes setup
 // app.use('/api', routes);
+app.use('/api/auth/',authRoutes);
 
 
 app.listen(port, () => {
