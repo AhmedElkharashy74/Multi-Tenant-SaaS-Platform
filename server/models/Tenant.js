@@ -16,6 +16,7 @@ const tenantSchema = new mongoose.Schema({
     },
     admin : {
         type : mongoose.Types.ObjectId(user),
+        ref : 'User',
         required : true,
         index : true,
 
